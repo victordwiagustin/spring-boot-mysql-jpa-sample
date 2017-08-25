@@ -6,18 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Created by neviim 2 on 23/08/2017.
+ * Created by neviim 2 on 25/08/2017.
  */
 
 @Entity
-public class User {
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
-    private String email;
-    private String username;
-    private String password;
+    private String address;
+    private String position;
 
     public Integer getId() {
         return id;
@@ -35,27 +34,19 @@ public class User {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAddress() {
+        return address;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPosition() {
+        return position;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
